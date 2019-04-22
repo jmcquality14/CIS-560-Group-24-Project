@@ -17,10 +17,6 @@ namespace Cis560DB
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new uxDBMenu());
-
-
-
-
         }
     }
 }

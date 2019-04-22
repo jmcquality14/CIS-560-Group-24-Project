@@ -16,7 +16,6 @@ namespace Cis560DB
         int rating;
         string movieTitle;
 
-
         public uxDBReviewForm()
         {
             InitializeComponent();
