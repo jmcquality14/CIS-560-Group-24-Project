@@ -35,7 +35,6 @@ namespace Cis560DB
         private void uxSubmit_Click(object sender, EventArgs e)
         {
             uxReviewTextBox.Clear();
-            ux
         }
 
     }
