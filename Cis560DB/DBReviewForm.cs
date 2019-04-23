@@ -15,9 +15,9 @@ namespace Cis560DB
     public partial class uxDBReviewForm : Form
     {
 
-        int _rating;
-        string _movieTitle;
-        string _review;
+        private int _rating;
+        private string _movieTitle;
+        private string _review;
 
         public event enableReviewButton SubmitEvent;
 
@@ -44,12 +44,9 @@ namespace Cis560DB
         private void uxSubmit_Click(object sender, EventArgs e)
         {          
             if (_rating > 0 && _movieTitle != null && _review != null)
-            {
-                uxReviewTextBox.Clear();
-                uxMovietTitleBox.Text = "--Select Movie--";
-                uxRatingBox.Text = "--Select Rating--";
-                Hide();
+            {          
                 SubmitEvent();
+                Close();
             } else {
                 MessageBox.Show("Please fill out all fields.");
             }

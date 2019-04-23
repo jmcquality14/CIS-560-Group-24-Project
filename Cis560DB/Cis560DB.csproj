@@ -45,12 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBResults.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DBResults.Designer.cs">
-      <DependentUpon>DBResults.cs</DependentUpon>
-    </Compile>
     <Compile Include="DBInsertForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,9 +71,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DBResults.resx">
-      <DependentUpon>DBResults.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DBInsertForm.resx">
       <DependentUpon>DBInsertForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -24,8 +24,13 @@ namespace Cis560DB
 
         private void uxSearchButton_Click(object sender, EventArgs e)
         {
-            Hide();
             SubmitEvent();
+            Close();
+        }
+
+        private void uxDBSearchForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

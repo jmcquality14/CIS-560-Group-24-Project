@@ -51,7 +51,6 @@ namespace Cis560DB
             } 
         }
 
-
         //Delegate Functions
         void uxDBReviewForm_ButtonEnabled() {
             uxAddReviewButton.Enabled = true; 

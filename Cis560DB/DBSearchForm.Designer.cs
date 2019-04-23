@@ -30,28 +30,33 @@
         {
             this.uxSearchButton = new System.Windows.Forms.Button();
             this.uxRatingBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.uxKeywordLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.uxTitleBox = new System.Windows.Forms.TextBox();
+            this.uxDirectorBox = new System.Windows.Forms.TextBox();
+            this.uxYearComboBox = new System.Windows.Forms.ComboBox();
+            this.uxGenreComboBox = new System.Windows.Forms.ComboBox();
+            this.uxOrderedByLabel = new System.Windows.Forms.Label();
+            this.uxDataGrid = new System.Windows.Forms.DataGridView();
+            this.uxSearchByLabel = new System.Windows.Forms.Label();
+            this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.MovieIDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GenreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DirectorCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReleaseDateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReleaseYearCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RatingCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RevenueCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uxOBCheckList = new System.Windows.Forms.CheckedListBox();
+            this.uxOrderByCheckList = new System.Windows.Forms.CheckedListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.uxDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // uxSearchButton
             // 
-            this.uxSearchButton.Location = new System.Drawing.Point(12, 181);
+            this.uxSearchButton.Location = new System.Drawing.Point(12, 458);
             this.uxSearchButton.Name = "uxSearchButton";
-            this.uxSearchButton.Size = new System.Drawing.Size(562, 23);
+            this.uxSearchButton.Size = new System.Drawing.Size(847, 23);
             this.uxSearchButton.TabIndex = 0;
             this.uxSearchButton.Text = "Search";
             this.uxSearchButton.UseVisualStyleBackColor = true;
@@ -65,70 +70,30 @@
             "3 Stars and Above",
             "2 Stars and Above ",
             "1 Star and Above"});
-            this.uxRatingBox.Location = new System.Drawing.Point(453, 74);
+            this.uxRatingBox.Location = new System.Drawing.Point(364, 391);
             this.uxRatingBox.Name = "uxRatingBox";
-            this.uxRatingBox.Size = new System.Drawing.Size(121, 21);
+            this.uxRatingBox.Size = new System.Drawing.Size(213, 21);
             this.uxRatingBox.TabIndex = 1;
             this.uxRatingBox.Text = "--Select Rating--";
             // 
-            // textBox1
+            // uxTitleBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(475, 20);
-            this.textBox1.TabIndex = 2;
+            this.uxTitleBox.Location = new System.Drawing.Point(364, 283);
+            this.uxTitleBox.Name = "uxTitleBox";
+            this.uxTitleBox.Size = new System.Drawing.Size(213, 20);
+            this.uxTitleBox.TabIndex = 2;
             // 
-            // uxKeywordLabel
+            // uxDirectorBox
             // 
-            this.uxKeywordLabel.AutoSize = true;
-            this.uxKeywordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxKeywordLabel.Location = new System.Drawing.Point(12, 9);
-            this.uxKeywordLabel.Name = "uxKeywordLabel";
-            this.uxKeywordLabel.Size = new System.Drawing.Size(81, 20);
-            this.uxKeywordLabel.TabIndex = 3;
-            this.uxKeywordLabel.Text = "Keywords:";
+            this.uxDirectorBox.Location = new System.Drawing.Point(364, 327);
+            this.uxDirectorBox.Name = "uxDirectorBox";
+            this.uxDirectorBox.Size = new System.Drawing.Size(213, 20);
+            this.uxDirectorBox.TabIndex = 5;
             // 
-            // label1
+            // uxYearComboBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Director (First, Last):";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(168, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(328, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Rating:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(328, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Year Released:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.uxYearComboBox.FormattingEnabled = true;
+            this.uxYearComboBox.Items.AddRange(new object[] {
             "2019",
             "2018",
             "2017",
@@ -249,77 +214,16 @@
             "1902",
             "1901",
             "1900"});
-            this.comboBox1.Location = new System.Drawing.Point(453, 109);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.Text = "--Select Year--";
+            this.uxYearComboBox.Location = new System.Drawing.Point(364, 369);
+            this.uxYearComboBox.Name = "uxYearComboBox";
+            this.uxYearComboBox.Size = new System.Drawing.Size(213, 21);
+            this.uxYearComboBox.TabIndex = 8;
+            this.uxYearComboBox.Text = "--Select Year--";
             // 
-            // label4
+            // uxGenreComboBox
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 75);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Production Cost:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 20);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Opening Box Office:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 20);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "All Time Profit:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(168, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 20);
-            this.textBox3.TabIndex = 12;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(168, 107);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 20);
-            this.textBox4.TabIndex = 13;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(168, 144);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(154, 20);
-            this.textBox5.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(328, 40);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 20);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Genre:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.uxGenreComboBox.FormattingEnabled = true;
+            this.uxGenreComboBox.Items.AddRange(new object[] {
             "Action ",
             "Adventure",
             "Animation",
@@ -341,36 +245,162 @@
             "Science Ficition",
             "Thriller",
             "Western"});
-            this.comboBox2.Location = new System.Drawing.Point(453, 39);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 16;
-            this.comboBox2.Text = "--Select Genre--";
+            this.uxGenreComboBox.Location = new System.Drawing.Point(364, 305);
+            this.uxGenreComboBox.Name = "uxGenreComboBox";
+            this.uxGenreComboBox.Size = new System.Drawing.Size(213, 21);
+            this.uxGenreComboBox.TabIndex = 16;
+            this.uxGenreComboBox.Text = "--Select Genre--";
+            // 
+            // uxOrderedByLabel
+            // 
+            this.uxOrderedByLabel.AutoSize = true;
+            this.uxOrderedByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxOrderedByLabel.Location = new System.Drawing.Point(12, 261);
+            this.uxOrderedByLabel.Name = "uxOrderedByLabel";
+            this.uxOrderedByLabel.Size = new System.Drawing.Size(93, 20);
+            this.uxOrderedByLabel.TabIndex = 19;
+            this.uxOrderedByLabel.Text = "Ordered By:";
+            // 
+            // uxDataGrid
+            // 
+            this.uxDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MovieIDCol,
+            this.MovieTitle,
+            this.GenreCol,
+            this.DirectorCol,
+            this.ReleaseDateCol,
+            this.ReleaseYearCol,
+            this.RatingCol,
+            this.CostCol,
+            this.RevenueCol});
+            this.uxDataGrid.Location = new System.Drawing.Point(16, 12);
+            this.uxDataGrid.Name = "uxDataGrid";
+            this.uxDataGrid.Size = new System.Drawing.Size(843, 233);
+            this.uxDataGrid.TabIndex = 20;
+            // 
+            // uxSearchByLabel
+            // 
+            this.uxSearchByLabel.AutoSize = true;
+            this.uxSearchByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxSearchByLabel.Location = new System.Drawing.Point(202, 261);
+            this.uxSearchByLabel.Name = "uxSearchByLabel";
+            this.uxSearchByLabel.Size = new System.Drawing.Size(86, 20);
+            this.uxSearchByLabel.TabIndex = 21;
+            this.uxSearchByLabel.Text = "Search By:";
+            // 
+            // uxDatePicker
+            // 
+            this.uxDatePicker.Location = new System.Drawing.Point(364, 348);
+            this.uxDatePicker.Name = "uxDatePicker";
+            this.uxDatePicker.Size = new System.Drawing.Size(213, 20);
+            this.uxDatePicker.TabIndex = 34;
+            // 
+            // MovieIDCol
+            // 
+            this.MovieIDCol.HeaderText = "Movie ID";
+            this.MovieIDCol.Name = "MovieIDCol";
+            // 
+            // MovieTitle
+            // 
+            this.MovieTitle.HeaderText = "Movie Title";
+            this.MovieTitle.Name = "MovieTitle";
+            // 
+            // GenreCol
+            // 
+            this.GenreCol.HeaderText = "Genre";
+            this.GenreCol.Name = "GenreCol";
+            // 
+            // DirectorCol
+            // 
+            this.DirectorCol.HeaderText = "Director";
+            this.DirectorCol.Name = "DirectorCol";
+            // 
+            // ReleaseDateCol
+            // 
+            this.ReleaseDateCol.HeaderText = "Release Date";
+            this.ReleaseDateCol.Name = "ReleaseDateCol";
+            // 
+            // ReleaseYearCol
+            // 
+            this.ReleaseYearCol.HeaderText = "Release Year";
+            this.ReleaseYearCol.Name = "ReleaseYearCol";
+            // 
+            // RatingCol
+            // 
+            this.RatingCol.HeaderText = "Movie Rating";
+            this.RatingCol.Name = "RatingCol";
+            // 
+            // CostCol
+            // 
+            this.CostCol.HeaderText = "Production Cost";
+            this.CostCol.Name = "CostCol";
+            // 
+            // RevenueCol
+            // 
+            this.RevenueCol.HeaderText = "Total Revenue";
+            this.RevenueCol.Name = "RevenueCol";
+            // 
+            // uxOBCheckList
+            // 
+            this.uxOBCheckList.BackColor = System.Drawing.SystemColors.Menu;
+            this.uxOBCheckList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uxOBCheckList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxOBCheckList.FormattingEnabled = true;
+            this.uxOBCheckList.Items.AddRange(new object[] {
+            "Title",
+            "Genre",
+            "Director",
+            "Released Date",
+            "Released Year",
+            "Rating",
+            "Production Cost",
+            "Total Revenue"});
+            this.uxOBCheckList.Location = new System.Drawing.Point(12, 284);
+            this.uxOBCheckList.Name = "uxOBCheckList";
+            this.uxOBCheckList.Size = new System.Drawing.Size(152, 168);
+            this.uxOBCheckList.TabIndex = 37;
+            // 
+            // uxOrderByCheckList
+            // 
+            this.uxOrderByCheckList.BackColor = System.Drawing.SystemColors.Menu;
+            this.uxOrderByCheckList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uxOrderByCheckList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxOrderByCheckList.FormattingEnabled = true;
+            this.uxOrderByCheckList.Items.AddRange(new object[] {
+            "Title",
+            "Genre",
+            "Director",
+            "Released Date",
+            "Released Year",
+            "Rating"});
+            this.uxOrderByCheckList.Location = new System.Drawing.Point(206, 284);
+            this.uxOrderByCheckList.Name = "uxOrderByCheckList";
+            this.uxOrderByCheckList.Size = new System.Drawing.Size(152, 126);
+            this.uxOrderByCheckList.TabIndex = 38;
             // 
             // uxDBSearchForm
             // 
+            this.AccessibleName = "uxRatingRadio";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 261);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.uxKeywordLabel);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(876, 502);
+            this.Controls.Add(this.uxOrderByCheckList);
+            this.Controls.Add(this.uxOBCheckList);
+            this.Controls.Add(this.uxDatePicker);
+            this.Controls.Add(this.uxSearchByLabel);
+            this.Controls.Add(this.uxDataGrid);
+            this.Controls.Add(this.uxOrderedByLabel);
+            this.Controls.Add(this.uxGenreComboBox);
+            this.Controls.Add(this.uxYearComboBox);
+            this.Controls.Add(this.uxDirectorBox);
+            this.Controls.Add(this.uxTitleBox);
             this.Controls.Add(this.uxRatingBox);
             this.Controls.Add(this.uxSearchButton);
             this.Name = "uxDBSearchForm";
-            this.Text = "DBSearchForm";
+            this.Text = "Rating";
+            this.Load += new System.EventHandler(this.uxDBSearchForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.uxDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,20 +410,24 @@
 
         private System.Windows.Forms.Button uxSearchButton;
         private System.Windows.Forms.ComboBox uxRatingBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label uxKeywordLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox uxTitleBox;
+        private System.Windows.Forms.TextBox uxDirectorBox;
+        private System.Windows.Forms.ComboBox uxYearComboBox;
+        private System.Windows.Forms.ComboBox uxGenreComboBox;
+        private System.Windows.Forms.Label uxOrderedByLabel;
+        private System.Windows.Forms.DataGridView uxDataGrid;
+        private System.Windows.Forms.Label uxSearchByLabel;
+        private System.Windows.Forms.DateTimePicker uxDatePicker;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MovieIDCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MovieTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GenreCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DirectorCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReleaseDateCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReleaseYearCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RatingCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CostCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RevenueCol;
+        private System.Windows.Forms.CheckedListBox uxOBCheckList;
+        private System.Windows.Forms.CheckedListBox uxOrderByCheckList;
     }
 }
