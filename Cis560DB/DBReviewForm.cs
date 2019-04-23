@@ -24,6 +24,11 @@ namespace Cis560DB
         public uxDBReviewForm()
         {
             InitializeComponent();
+            /*
+             * foreach(string title in movieList){
+             *      uxMovietTitleBox.Items.Add(title);
+             * }
+             */
         }
 
         private void uxRatingChanged(object sender, EventArgs e)
@@ -43,8 +48,7 @@ namespace Cis560DB
 
         private void uxSubmit_Click(object sender, EventArgs e)
         {          
-            if (_rating > 0 && _movieTitle != null && _review != null)
-            {          
+            if (_rating > 0 && _movieTitle != null && _review != null){                   
                 SubmitEvent();
                 Close();
             } else {
