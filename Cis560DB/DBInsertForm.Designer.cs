@@ -203,16 +203,27 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Action",
+            "Action ",
             "Adventure",
+            "Animation",
             "Comedy",
-            "Documentary",
+            "Crime",
             "Drama",
+            "Fantasy",
+            "Historical",
+            "Historical Fiction",
             "Horror",
-            "Sci-Fi",
-            "Space Opera",
-            "Superhero",
-            "Thriller"});
+            "Magical Realism",
+            "Mystery",
+            "Paranoid Fiction",
+            "Philosophical",
+            "Political",
+            "Romance",
+            "Saga",
+            "Satire",
+            "Science Ficition",
+            "Thriller",
+            "Western"});
             this.comboBox2.Location = new System.Drawing.Point(324, 12);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(110, 21);
