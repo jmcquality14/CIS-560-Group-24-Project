@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace Cis560DB
 {
+    public delegate void enableSearchButton();
+
     public partial class uxDBSearchForm : Form
     {
+        public event enableSearchButton SubmitEvent;
+
         public uxDBSearchForm()
         {
             InitializeComponent();
+
+        }
+
+        private void uxSearchButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            SubmitEvent();
         }
     }
 }

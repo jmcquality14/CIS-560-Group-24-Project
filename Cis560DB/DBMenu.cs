@@ -12,7 +12,6 @@ namespace Cis560DB
 {
     public partial class uxDBMenu : Form
     {
-
         public uxDBInsertForm uxInsertForm;
         public uxDBSearchForm uxSearchForm;
         public uxDBReviewForm uxReviewForm;
@@ -24,26 +23,47 @@ namespace Cis560DB
 
         private void uxInsertMovie_Click(object sender, EventArgs e)
         {
-            //if (uxInsertForm == null) {
+            if (uxInsertMoviewButton.Enabled == true) {
                 uxInsertForm = new uxDBInsertForm();
+                uxInsertForm.SubmitEvent += new enableInsertButton(uxDBInsertForm_ButtonEnabled);
                 uxInsertForm.Show();
-            //}
+                uxInsertMoviewButton.Enabled = false;
+            }
         }
 
-        private void uxSearchDB_Click(object sender, EventArgs e)
+        private void uxSearch_Click(object sender, EventArgs e)
         {
-            //if (uxSearchForm == null) {
+            if (uxSearchButton.Enabled == true) {
                 uxSearchForm = new uxDBSearchForm();
+                uxSearchForm.SubmitEvent += new enableSearchButton(uxDBSearchForm_ButtonEnabled);
                 uxSearchForm.Show();
-            //}
+                uxSearchButton.Enabled = false;
+            }
         }
 
         private void uxAddReview_Click(object sender, EventArgs e)
         {
-            //if (uxReviewForm == null) {
+            if (uxAddReviewButton.Enabled == true) {
                 uxReviewForm = new uxDBReviewForm();
+                uxReviewForm.SubmitEvent += new enableReviewButton(uxDBReviewForm_ButtonEnabled);
                 uxReviewForm.Show();
-            //}
+                uxAddReviewButton.Enabled = false;
+            } 
+        }
+
+
+        //Delegate Functions
+        void uxDBReviewForm_ButtonEnabled() {
+            uxAddReviewButton.Enabled = true; 
+        }
+
+        void uxDBInsertForm_ButtonEnabled() {
+            uxInsertMoviewButton.Enabled = true;
+        }
+
+        void uxDBSearchForm_ButtonEnabled()
+        {
+            uxSearchButton.Enabled = true;
         }
     }
 }

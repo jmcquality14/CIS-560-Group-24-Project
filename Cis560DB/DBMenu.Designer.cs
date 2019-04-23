@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uxSearchDBButton = new System.Windows.Forms.Button();
+            this.uxSearchButton = new System.Windows.Forms.Button();
             this.uxInsertMoviewButton = new System.Windows.Forms.Button();
             this.uxAddReviewButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // uxSearchDBButton
+            // uxSearchButton
             // 
-            this.uxSearchDBButton.Location = new System.Drawing.Point(12, 12);
-            this.uxSearchDBButton.Name = "uxSearchDBButton";
-            this.uxSearchDBButton.Size = new System.Drawing.Size(260, 50);
-            this.uxSearchDBButton.TabIndex = 0;
-            this.uxSearchDBButton.Text = "Search Database";
-            this.uxSearchDBButton.UseVisualStyleBackColor = true;
-            this.uxSearchDBButton.Click += new System.EventHandler(this.uxSearchDB_Click);
+            this.uxSearchButton.Location = new System.Drawing.Point(12, 12);
+            this.uxSearchButton.Name = "uxSearchButton";
+            this.uxSearchButton.Size = new System.Drawing.Size(260, 50);
+            this.uxSearchButton.TabIndex = 0;
+            this.uxSearchButton.Text = "Search Database";
+            this.uxSearchButton.UseVisualStyleBackColor = true;
+            this.uxSearchButton.Click += new System.EventHandler(this.uxSearch_Click);
             // 
             // uxInsertMoviewButton
             // 
@@ -70,7 +70,7 @@
             this.ClientSize = new System.Drawing.Size(284, 187);
             this.Controls.Add(this.uxAddReviewButton);
             this.Controls.Add(this.uxInsertMoviewButton);
-            this.Controls.Add(this.uxSearchDBButton);
+            this.Controls.Add(this.uxSearchButton);
             this.Name = "uxDBMenu";
             this.Text = "DBMenu";
             this.ResumeLayout(false);
@@ -79,7 +79,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button uxSearchDBButton;
+        private System.Windows.Forms.Button uxSearchButton;
         private System.Windows.Forms.Button uxInsertMoviewButton;
         private System.Windows.Forms.Button uxAddReviewButton;
     }
