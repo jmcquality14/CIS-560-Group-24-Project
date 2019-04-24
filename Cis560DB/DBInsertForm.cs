@@ -59,16 +59,6 @@ namespace Cis560DB
             }
         }
 
-        private void uxCostBox_TextChanged(object sender, EventArgs e)
-        {
-            try {
-                _productionCost = Convert.ToDouble(uxCostBox.Text);
-            } catch (Exception) {
-                MessageBox.Show("Please Enter a Double Value. No letters please.");
-                uxCostBox.Text = "";
-            }
-        }
-
         private void uxDatePicker_ValueChanged(object sender, EventArgs e)
         {
             _releaseDate = uxDatePicker.Value.Date;

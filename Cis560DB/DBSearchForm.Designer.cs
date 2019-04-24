@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uxSearchButton = new System.Windows.Forms.Button();
+            this.uxCloseButton = new System.Windows.Forms.Button();
             this.uxRatingBox = new System.Windows.Forms.ComboBox();
             this.uxTitleBox = new System.Windows.Forms.TextBox();
             this.uxDirectorBox = new System.Windows.Forms.TextBox();
             this.uxGenreComboBox = new System.Windows.Forms.ComboBox();
-            this.uxOrderedByLabel = new System.Windows.Forms.Label();
             this.uxDataGrid = new System.Windows.Forms.DataGridView();
             this.MovieIDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MovieTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,21 +45,21 @@
             this.RevenueCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uxSearchByLabel = new System.Windows.Forms.Label();
             this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.uxOBCheckList = new System.Windows.Forms.CheckedListBox();
             this.uxOrderByCheckList = new System.Windows.Forms.CheckedListBox();
             this.uxActotBox = new System.Windows.Forms.TextBox();
+            this.uxSearchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uxDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // uxSearchButton
+            // uxCloseButton
             // 
-            this.uxSearchButton.Location = new System.Drawing.Point(12, 458);
-            this.uxSearchButton.Name = "uxSearchButton";
-            this.uxSearchButton.Size = new System.Drawing.Size(847, 23);
-            this.uxSearchButton.TabIndex = 0;
-            this.uxSearchButton.Text = "Search";
-            this.uxSearchButton.UseVisualStyleBackColor = true;
-            this.uxSearchButton.Click += new System.EventHandler(this.uxSearchButton_Click);
+            this.uxCloseButton.Location = new System.Drawing.Point(12, 458);
+            this.uxCloseButton.Name = "uxCloseButton";
+            this.uxCloseButton.Size = new System.Drawing.Size(847, 23);
+            this.uxCloseButton.TabIndex = 0;
+            this.uxCloseButton.Text = "Close Form";
+            this.uxCloseButton.UseVisualStyleBackColor = true;
+            this.uxCloseButton.Click += new System.EventHandler(this.uxCloseButton_Click);
             // 
             // uxRatingBox
             // 
@@ -70,25 +69,28 @@
             "3 Stars and Above",
             "2 Stars and Above ",
             "1 Star and Above"});
-            this.uxRatingBox.Location = new System.Drawing.Point(364, 389);
+            this.uxRatingBox.Location = new System.Drawing.Point(183, 389);
             this.uxRatingBox.Name = "uxRatingBox";
             this.uxRatingBox.Size = new System.Drawing.Size(213, 21);
             this.uxRatingBox.TabIndex = 1;
             this.uxRatingBox.Text = "--Select Rating--";
+            this.uxRatingBox.SelectedIndexChanged += new System.EventHandler(this.uxRatingBox_SelectedIndexChanged);
             // 
             // uxTitleBox
             // 
-            this.uxTitleBox.Location = new System.Drawing.Point(364, 283);
+            this.uxTitleBox.Location = new System.Drawing.Point(183, 283);
             this.uxTitleBox.Name = "uxTitleBox";
             this.uxTitleBox.Size = new System.Drawing.Size(213, 20);
             this.uxTitleBox.TabIndex = 2;
+            this.uxTitleBox.TextChanged += new System.EventHandler(this.uxTitleBox_TextChanged);
             // 
             // uxDirectorBox
             // 
-            this.uxDirectorBox.Location = new System.Drawing.Point(364, 327);
+            this.uxDirectorBox.Location = new System.Drawing.Point(183, 327);
             this.uxDirectorBox.Name = "uxDirectorBox";
             this.uxDirectorBox.Size = new System.Drawing.Size(213, 20);
             this.uxDirectorBox.TabIndex = 5;
+            this.uxDirectorBox.TextChanged += new System.EventHandler(this.uxDirectorBox_TextChanged);
             // 
             // uxGenreComboBox
             // 
@@ -115,21 +117,12 @@
             "Science Ficition",
             "Thriller",
             "Western"});
-            this.uxGenreComboBox.Location = new System.Drawing.Point(364, 305);
+            this.uxGenreComboBox.Location = new System.Drawing.Point(183, 305);
             this.uxGenreComboBox.Name = "uxGenreComboBox";
             this.uxGenreComboBox.Size = new System.Drawing.Size(213, 21);
             this.uxGenreComboBox.TabIndex = 16;
             this.uxGenreComboBox.Text = "--Select Genre--";
-            // 
-            // uxOrderedByLabel
-            // 
-            this.uxOrderedByLabel.AutoSize = true;
-            this.uxOrderedByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxOrderedByLabel.Location = new System.Drawing.Point(12, 261);
-            this.uxOrderedByLabel.Name = "uxOrderedByLabel";
-            this.uxOrderedByLabel.Size = new System.Drawing.Size(93, 20);
-            this.uxOrderedByLabel.TabIndex = 19;
-            this.uxOrderedByLabel.Text = "Ordered By:";
+            this.uxGenreComboBox.SelectedIndexChanged += new System.EventHandler(this.uxGenreComboBox_SelectedIndexChanged);
             // 
             // uxDataGrid
             // 
@@ -198,7 +191,7 @@
             // 
             this.uxSearchByLabel.AutoSize = true;
             this.uxSearchByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSearchByLabel.Location = new System.Drawing.Point(202, 261);
+            this.uxSearchByLabel.Location = new System.Drawing.Point(21, 260);
             this.uxSearchByLabel.Name = "uxSearchByLabel";
             this.uxSearchByLabel.Size = new System.Drawing.Size(86, 20);
             this.uxSearchByLabel.TabIndex = 21;
@@ -206,28 +199,11 @@
             // 
             // uxDatePicker
             // 
-            this.uxDatePicker.Location = new System.Drawing.Point(364, 368);
+            this.uxDatePicker.Location = new System.Drawing.Point(183, 368);
             this.uxDatePicker.Name = "uxDatePicker";
             this.uxDatePicker.Size = new System.Drawing.Size(213, 20);
             this.uxDatePicker.TabIndex = 34;
-            // 
-            // uxOBCheckList
-            // 
-            this.uxOBCheckList.BackColor = System.Drawing.SystemColors.Menu;
-            this.uxOBCheckList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.uxOBCheckList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxOBCheckList.FormattingEnabled = true;
-            this.uxOBCheckList.Items.AddRange(new object[] {
-            "Title",
-            "Genre",
-            "Director",
-            "Released Date",
-            "Rating",
-            "Total Revenue"});
-            this.uxOBCheckList.Location = new System.Drawing.Point(12, 284);
-            this.uxOBCheckList.Name = "uxOBCheckList";
-            this.uxOBCheckList.Size = new System.Drawing.Size(152, 168);
-            this.uxOBCheckList.TabIndex = 37;
+            this.uxDatePicker.ValueChanged += new System.EventHandler(this.uxDatePicker_ValueChanged);
             // 
             // uxOrderByCheckList
             // 
@@ -242,17 +218,27 @@
             "Actor",
             "Released Date",
             "Rating"});
-            this.uxOrderByCheckList.Location = new System.Drawing.Point(206, 284);
+            this.uxOrderByCheckList.Location = new System.Drawing.Point(25, 283);
             this.uxOrderByCheckList.Name = "uxOrderByCheckList";
             this.uxOrderByCheckList.Size = new System.Drawing.Size(152, 126);
             this.uxOrderByCheckList.TabIndex = 38;
             // 
             // uxActotBox
             // 
-            this.uxActotBox.Location = new System.Drawing.Point(364, 347);
+            this.uxActotBox.Location = new System.Drawing.Point(183, 347);
             this.uxActotBox.Name = "uxActotBox";
             this.uxActotBox.Size = new System.Drawing.Size(213, 20);
             this.uxActotBox.TabIndex = 39;
+            this.uxActotBox.TextChanged += new System.EventHandler(this.uxActotBox_TextChanged);
+            // 
+            // uxSearchButton
+            // 
+            this.uxSearchButton.Location = new System.Drawing.Point(12, 429);
+            this.uxSearchButton.Name = "uxSearchButton";
+            this.uxSearchButton.Size = new System.Drawing.Size(847, 23);
+            this.uxSearchButton.TabIndex = 40;
+            this.uxSearchButton.Text = "Search";
+            this.uxSearchButton.UseVisualStyleBackColor = true;
             // 
             // uxDBSearchForm
             // 
@@ -261,21 +247,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 502);
             this.ControlBox = false;
+            this.Controls.Add(this.uxSearchButton);
             this.Controls.Add(this.uxActotBox);
             this.Controls.Add(this.uxOrderByCheckList);
-            this.Controls.Add(this.uxOBCheckList);
             this.Controls.Add(this.uxDatePicker);
             this.Controls.Add(this.uxSearchByLabel);
             this.Controls.Add(this.uxDataGrid);
-            this.Controls.Add(this.uxOrderedByLabel);
             this.Controls.Add(this.uxGenreComboBox);
             this.Controls.Add(this.uxDirectorBox);
             this.Controls.Add(this.uxTitleBox);
             this.Controls.Add(this.uxRatingBox);
-            this.Controls.Add(this.uxSearchButton);
+            this.Controls.Add(this.uxCloseButton);
             this.Name = "uxDBSearchForm";
             this.Text = "Rating";
-            this.Load += new System.EventHandler(this.uxDBSearchForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uxDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -284,12 +268,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button uxSearchButton;
+        private System.Windows.Forms.Button uxCloseButton;
         private System.Windows.Forms.ComboBox uxRatingBox;
         private System.Windows.Forms.TextBox uxTitleBox;
         private System.Windows.Forms.TextBox uxDirectorBox;
         private System.Windows.Forms.ComboBox uxGenreComboBox;
-        private System.Windows.Forms.Label uxOrderedByLabel;
         private System.Windows.Forms.DataGridView uxDataGrid;
         private System.Windows.Forms.Label uxSearchByLabel;
         private System.Windows.Forms.DateTimePicker uxDatePicker;
@@ -302,8 +285,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RatingCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn CostCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn RevenueCol;
-        private System.Windows.Forms.CheckedListBox uxOBCheckList;
         private System.Windows.Forms.CheckedListBox uxOrderByCheckList;
         private System.Windows.Forms.TextBox uxActotBox;
+        private System.Windows.Forms.Button uxSearchButton;
     }
 }
