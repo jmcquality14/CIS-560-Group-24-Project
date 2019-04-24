@@ -385,6 +385,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 502);
+            this.ControlBox = false;
             this.Controls.Add(this.uxOrderByCheckList);
             this.Controls.Add(this.uxOBCheckList);
             this.Controls.Add(this.uxDatePicker);

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Cis560DB
 {
@@ -25,10 +27,27 @@ namespace Cis560DB
         {
             InitializeComponent();
             /*
-             * foreach(string title in movieList){
-             *      uxMovietTitleBox.Items.Add(title);
-             * }
-             */
+            using (SqlConnection connection = new SqlConnection()) {        // Finish Line
+                try {
+
+                    string query = "SELECT MovieTitle FROM Movie"
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conection);
+                    connection.Open();
+                    DataSet set = new DataSet();
+                    adapter.Fill(set, "Movies");
+                    SqlCommand command = new SqlCommand(query, db.Connection);
+            
+                    SqlDataReader reader = .ExecuteReader();
+                    while(reader.Read()){
+                        uxMovietTitleBox.Items.Add(title);
+                    }
+
+                } catch (Exception ex){
+                    MessageBox.Show("Error Occured: " + ex);
+                }
+            }
+            */
+
         }
 
         private void uxRatingChanged(object sender, EventArgs e)
@@ -48,7 +67,16 @@ namespace Cis560DB
 
         private void uxSubmit_Click(object sender, EventArgs e)
         {          
-            if (_rating > 0 && _movieTitle != null && _review != null){                   
+            if (_rating > 0 && _movieTitle != null && _review != null){
+                /*
+                //Code for Query
+                string query = ""; // need to add query
+                SqlCommand Command = new SqlCommand(query, db.Connection );
+                Command.Parameters.Add("@Movie",_movieTitle);
+                Command.Parameters.Add("@Rating", _rating);
+                Command.Parameters.Add("@Review", _review);
+                Command.ExecuteNonQuery();
+                */
                 SubmitEvent();
                 Close();
             } else {
