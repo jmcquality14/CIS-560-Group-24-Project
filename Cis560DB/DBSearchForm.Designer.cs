@@ -36,8 +36,6 @@
             this.uxGenreComboBox = new System.Windows.Forms.ComboBox();
             this.uxOrderedByLabel = new System.Windows.Forms.Label();
             this.uxDataGrid = new System.Windows.Forms.DataGridView();
-            this.uxSearchByLabel = new System.Windows.Forms.Label();
-            this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
             this.MovieIDCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MovieTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GenreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +45,8 @@
             this.RatingCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CostCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RevenueCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uxSearchByLabel = new System.Windows.Forms.Label();
+            this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
             this.uxOBCheckList = new System.Windows.Forms.CheckedListBox();
             this.uxOrderByCheckList = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.uxDataGrid)).BeginInit();
@@ -279,23 +279,6 @@
             this.uxDataGrid.Size = new System.Drawing.Size(843, 233);
             this.uxDataGrid.TabIndex = 20;
             // 
-            // uxSearchByLabel
-            // 
-            this.uxSearchByLabel.AutoSize = true;
-            this.uxSearchByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSearchByLabel.Location = new System.Drawing.Point(202, 261);
-            this.uxSearchByLabel.Name = "uxSearchByLabel";
-            this.uxSearchByLabel.Size = new System.Drawing.Size(86, 20);
-            this.uxSearchByLabel.TabIndex = 21;
-            this.uxSearchByLabel.Text = "Search By:";
-            // 
-            // uxDatePicker
-            // 
-            this.uxDatePicker.Location = new System.Drawing.Point(364, 348);
-            this.uxDatePicker.Name = "uxDatePicker";
-            this.uxDatePicker.Size = new System.Drawing.Size(213, 20);
-            this.uxDatePicker.TabIndex = 34;
-            // 
             // MovieIDCol
             // 
             this.MovieIDCol.HeaderText = "Movie ID";
@@ -340,6 +323,23 @@
             // 
             this.RevenueCol.HeaderText = "Total Revenue";
             this.RevenueCol.Name = "RevenueCol";
+            // 
+            // uxSearchByLabel
+            // 
+            this.uxSearchByLabel.AutoSize = true;
+            this.uxSearchByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxSearchByLabel.Location = new System.Drawing.Point(202, 261);
+            this.uxSearchByLabel.Name = "uxSearchByLabel";
+            this.uxSearchByLabel.Size = new System.Drawing.Size(86, 20);
+            this.uxSearchByLabel.TabIndex = 21;
+            this.uxSearchByLabel.Text = "Search By:";
+            // 
+            // uxDatePicker
+            // 
+            this.uxDatePicker.Location = new System.Drawing.Point(364, 348);
+            this.uxDatePicker.Name = "uxDatePicker";
+            this.uxDatePicker.Size = new System.Drawing.Size(213, 20);
+            this.uxDatePicker.TabIndex = 34;
             // 
             // uxOBCheckList
             // 
