@@ -32,7 +32,6 @@
             this.uxRatingBox = new System.Windows.Forms.ComboBox();
             this.uxTitleBox = new System.Windows.Forms.TextBox();
             this.uxDirectorBox = new System.Windows.Forms.TextBox();
-            this.uxYearComboBox = new System.Windows.Forms.ComboBox();
             this.uxGenreComboBox = new System.Windows.Forms.ComboBox();
             this.uxOrderedByLabel = new System.Windows.Forms.Label();
             this.uxDataGrid = new System.Windows.Forms.DataGridView();
@@ -49,6 +48,7 @@
             this.uxDatePicker = new System.Windows.Forms.DateTimePicker();
             this.uxOBCheckList = new System.Windows.Forms.CheckedListBox();
             this.uxOrderByCheckList = new System.Windows.Forms.CheckedListBox();
+            this.uxActotBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.uxDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +70,7 @@
             "3 Stars and Above",
             "2 Stars and Above ",
             "1 Star and Above"});
-            this.uxRatingBox.Location = new System.Drawing.Point(364, 391);
+            this.uxRatingBox.Location = new System.Drawing.Point(364, 389);
             this.uxRatingBox.Name = "uxRatingBox";
             this.uxRatingBox.Size = new System.Drawing.Size(213, 21);
             this.uxRatingBox.TabIndex = 1;
@@ -89,136 +89,6 @@
             this.uxDirectorBox.Name = "uxDirectorBox";
             this.uxDirectorBox.Size = new System.Drawing.Size(213, 20);
             this.uxDirectorBox.TabIndex = 5;
-            // 
-            // uxYearComboBox
-            // 
-            this.uxYearComboBox.FormattingEnabled = true;
-            this.uxYearComboBox.Items.AddRange(new object[] {
-            "2019",
-            "2018",
-            "2017",
-            "2016",
-            "2015",
-            "2014",
-            "2013",
-            "2012",
-            "2011",
-            "2010",
-            "2009",
-            "2008",
-            "2007",
-            "2006",
-            "2005",
-            "2004",
-            "2003",
-            "2002",
-            "2001",
-            "2000",
-            "1999",
-            "1998",
-            "1997",
-            "1996",
-            "1995",
-            "1994",
-            "1993",
-            "1992",
-            "1991",
-            "1990",
-            "1989",
-            "1988",
-            "1987",
-            "1986",
-            "1985",
-            "1984",
-            "1983",
-            "1982",
-            "1981",
-            "1980",
-            "1979",
-            "1978",
-            "1977",
-            "1976",
-            "1975",
-            "1974",
-            "1973",
-            "1972",
-            "1971",
-            "1970",
-            "1969",
-            "1968",
-            "1967",
-            "1966",
-            "1965",
-            "1964",
-            "1963",
-            "1962",
-            "1961",
-            "1960",
-            "1959",
-            "1958",
-            "1957",
-            "1956",
-            "1955",
-            "1954",
-            "1953",
-            "1952",
-            "1951",
-            "1950",
-            "1949",
-            "1948",
-            "1947",
-            "1946",
-            "1945",
-            "1944",
-            "1943",
-            "1942",
-            "1941",
-            "1940",
-            "1939",
-            "1938",
-            "1937",
-            "1936",
-            "1935",
-            "1934",
-            "1933",
-            "1932",
-            "1931",
-            "1930",
-            "1929",
-            "1928",
-            "1927",
-            "1926",
-            "1925",
-            "1924",
-            "1923",
-            "1922",
-            "1921",
-            "1920",
-            "1919",
-            "1918",
-            "1917",
-            "1916",
-            "1915",
-            "1914",
-            "1913",
-            "1912",
-            "1911",
-            "1910",
-            "1909",
-            "1908",
-            "1907",
-            "1906",
-            "1905",
-            "1904",
-            "1903",
-            "1902",
-            "1901",
-            "1900"});
-            this.uxYearComboBox.Location = new System.Drawing.Point(364, 369);
-            this.uxYearComboBox.Name = "uxYearComboBox";
-            this.uxYearComboBox.Size = new System.Drawing.Size(213, 21);
-            this.uxYearComboBox.TabIndex = 8;
-            this.uxYearComboBox.Text = "--Select Year--";
             // 
             // uxGenreComboBox
             // 
@@ -336,7 +206,7 @@
             // 
             // uxDatePicker
             // 
-            this.uxDatePicker.Location = new System.Drawing.Point(364, 348);
+            this.uxDatePicker.Location = new System.Drawing.Point(364, 368);
             this.uxDatePicker.Name = "uxDatePicker";
             this.uxDatePicker.Size = new System.Drawing.Size(213, 20);
             this.uxDatePicker.TabIndex = 34;
@@ -352,9 +222,7 @@
             "Genre",
             "Director",
             "Released Date",
-            "Released Year",
             "Rating",
-            "Production Cost",
             "Total Revenue"});
             this.uxOBCheckList.Location = new System.Drawing.Point(12, 284);
             this.uxOBCheckList.Name = "uxOBCheckList";
@@ -371,13 +239,20 @@
             "Title",
             "Genre",
             "Director",
+            "Actor",
             "Released Date",
-            "Released Year",
             "Rating"});
             this.uxOrderByCheckList.Location = new System.Drawing.Point(206, 284);
             this.uxOrderByCheckList.Name = "uxOrderByCheckList";
             this.uxOrderByCheckList.Size = new System.Drawing.Size(152, 126);
             this.uxOrderByCheckList.TabIndex = 38;
+            // 
+            // uxActotBox
+            // 
+            this.uxActotBox.Location = new System.Drawing.Point(364, 347);
+            this.uxActotBox.Name = "uxActotBox";
+            this.uxActotBox.Size = new System.Drawing.Size(213, 20);
+            this.uxActotBox.TabIndex = 39;
             // 
             // uxDBSearchForm
             // 
@@ -386,6 +261,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 502);
             this.ControlBox = false;
+            this.Controls.Add(this.uxActotBox);
             this.Controls.Add(this.uxOrderByCheckList);
             this.Controls.Add(this.uxOBCheckList);
             this.Controls.Add(this.uxDatePicker);
@@ -393,7 +269,6 @@
             this.Controls.Add(this.uxDataGrid);
             this.Controls.Add(this.uxOrderedByLabel);
             this.Controls.Add(this.uxGenreComboBox);
-            this.Controls.Add(this.uxYearComboBox);
             this.Controls.Add(this.uxDirectorBox);
             this.Controls.Add(this.uxTitleBox);
             this.Controls.Add(this.uxRatingBox);
@@ -413,7 +288,6 @@
         private System.Windows.Forms.ComboBox uxRatingBox;
         private System.Windows.Forms.TextBox uxTitleBox;
         private System.Windows.Forms.TextBox uxDirectorBox;
-        private System.Windows.Forms.ComboBox uxYearComboBox;
         private System.Windows.Forms.ComboBox uxGenreComboBox;
         private System.Windows.Forms.Label uxOrderedByLabel;
         private System.Windows.Forms.DataGridView uxDataGrid;
@@ -430,5 +304,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RevenueCol;
         private System.Windows.Forms.CheckedListBox uxOBCheckList;
         private System.Windows.Forms.CheckedListBox uxOrderByCheckList;
+        private System.Windows.Forms.TextBox uxActotBox;
     }
 }

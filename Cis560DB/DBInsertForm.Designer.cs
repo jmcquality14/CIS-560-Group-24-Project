@@ -35,9 +35,7 @@
             this.uxRatingLabel = new System.Windows.Forms.Label();
             this.uxRatingBox = new System.Windows.Forms.ComboBox();
             this.uxProfitLabel = new System.Windows.Forms.Label();
-            this.uxCostLabel = new System.Windows.Forms.Label();
             this.uxProfitBox = new System.Windows.Forms.TextBox();
-            this.uxCostBox = new System.Windows.Forms.TextBox();
             this.uxAddMovieButton = new System.Windows.Forms.Button();
             this.uxGenreLabel = new System.Windows.Forms.Label();
             this.uxGenreBox = new System.Windows.Forms.ComboBox();
@@ -113,19 +111,9 @@
             this.uxProfitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxProfitLabel.Location = new System.Drawing.Point(12, 61);
             this.uxProfitLabel.Name = "uxProfitLabel";
-            this.uxProfitLabel.Size = new System.Drawing.Size(273, 20);
+            this.uxProfitLabel.Size = new System.Drawing.Size(150, 20);
             this.uxProfitLabel.TabIndex = 18;
-            this.uxProfitLabel.Text = "Box Office Revenue( per million USD)";
-            // 
-            // uxCostLabel
-            // 
-            this.uxCostLabel.AutoSize = true;
-            this.uxCostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxCostLabel.Location = new System.Drawing.Point(12, 91);
-            this.uxCostLabel.Name = "uxCostLabel";
-            this.uxCostLabel.Size = new System.Drawing.Size(249, 20);
-            this.uxCostLabel.TabIndex = 19;
-            this.uxCostLabel.Text = "Production Cost( per million USD) ";
+            this.uxProfitLabel.Text = "Box Office Revenue";
             // 
             // uxProfitBox
             // 
@@ -139,19 +127,11 @@
             "Sci-Fi",
             "Space-Opera",
             "Thriller"});
-            this.uxProfitBox.Location = new System.Drawing.Point(291, 61);
+            this.uxProfitBox.Location = new System.Drawing.Point(168, 61);
             this.uxProfitBox.Name = "uxProfitBox";
-            this.uxProfitBox.Size = new System.Drawing.Size(74, 20);
+            this.uxProfitBox.Size = new System.Drawing.Size(197, 20);
             this.uxProfitBox.TabIndex = 21;
             this.uxProfitBox.TextChanged += new System.EventHandler(this.uxProfitBox_TextChanged);
-            // 
-            // uxCostBox
-            // 
-            this.uxCostBox.Location = new System.Drawing.Point(291, 93);
-            this.uxCostBox.Name = "uxCostBox";
-            this.uxCostBox.Size = new System.Drawing.Size(74, 20);
-            this.uxCostBox.TabIndex = 22;
-            this.uxCostBox.TextChanged += new System.EventHandler(this.uxCostBox_TextChanged);
             // 
             // uxAddMovieButton
             // 
@@ -210,7 +190,7 @@
             // 
             this.uxDateLabel.AutoSize = true;
             this.uxDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDateLabel.Location = new System.Drawing.Point(12, 121);
+            this.uxDateLabel.Location = new System.Drawing.Point(12, 91);
             this.uxDateLabel.Name = "uxDateLabel";
             this.uxDateLabel.Size = new System.Drawing.Size(107, 20);
             this.uxDateLabel.TabIndex = 27;
@@ -218,7 +198,7 @@
             // 
             // uxDatePicker
             // 
-            this.uxDatePicker.Location = new System.Drawing.Point(148, 121);
+            this.uxDatePicker.Location = new System.Drawing.Point(148, 91);
             this.uxDatePicker.Name = "uxDatePicker";
             this.uxDatePicker.Size = new System.Drawing.Size(217, 20);
             this.uxDatePicker.TabIndex = 30;
@@ -234,9 +214,7 @@
             this.Controls.Add(this.uxDateLabel);
             this.Controls.Add(this.uxGenreBox);
             this.Controls.Add(this.uxGenreLabel);
-            this.Controls.Add(this.uxCostBox);
             this.Controls.Add(this.uxProfitBox);
-            this.Controls.Add(this.uxCostLabel);
             this.Controls.Add(this.uxProfitLabel);
             this.Controls.Add(this.uxAddMovieButton);
             this.Controls.Add(this.uxRatingBox);
@@ -260,9 +238,7 @@
         private System.Windows.Forms.Label uxRatingLabel;
         private System.Windows.Forms.ComboBox uxRatingBox;
         private System.Windows.Forms.Label uxProfitLabel;
-        private System.Windows.Forms.Label uxCostLabel;
         private System.Windows.Forms.TextBox uxProfitBox;
-        private System.Windows.Forms.TextBox uxCostBox;
         private System.Windows.Forms.Button uxAddMovieButton;
         private System.Windows.Forms.Label uxGenreLabel;
         private System.Windows.Forms.ComboBox uxGenreBox;
