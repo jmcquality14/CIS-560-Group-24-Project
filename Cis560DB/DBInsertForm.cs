@@ -51,12 +51,22 @@ namespace Cis560DB
 
         private void uxProfitBox_TextChanged(object sender, EventArgs e)
         {
-            _revenue = Convert.ToDouble(uxProfitBox.Text);
+            try { 
+                _revenue = Convert.ToDouble(uxProfitBox.Text);
+            } catch (Exception) {
+                MessageBox.Show("Please Enter a Double Value. No letters please.");
+                uxProfitBox.Text = "";
+            }
         }
 
         private void uxCostBox_TextChanged(object sender, EventArgs e)
         {
-            _productionCost = Convert.ToDouble(uxCostBox.Text);
+            try {
+                _productionCost = Convert.ToDouble(uxCostBox.Text);
+            } catch (Exception) {
+                MessageBox.Show("Please Enter a Double Value. No letters please.");
+                uxCostBox.Text = "";
+            }
         }
 
         private void uxDatePicker_ValueChanged(object sender, EventArgs e)
